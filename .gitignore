@@ -1,0 +1,31 @@
+# dependencies
+/node_modules
+
+# IDE
+/.idea
+/.awcache
+
+# misc
+npm-debug.log
+yarn-error.log
+
+# example
+/quick-start
+
+# tests
+/test
+/coverage
+/.nyc_output
+
+# dist
+/dist
+
+# conf
+*.config.js
+.env
+.env.*
+!.env.example
+
+# cloud
+
+# others
