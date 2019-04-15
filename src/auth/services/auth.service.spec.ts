@@ -57,7 +57,7 @@ describe('AuthService', () => {
         .spyOn(DataStorage, 'getVerificationCodeByPhoneNumber')
         .mockReturnValue(1234);
 
-      expect(await service.sendingVerificationAlgorithm('+5298647254')).toMatchObject({
+      expect(await service.sendingVerificationAlgorithm('+526186437843')).toMatchObject({
         errorCode: null,
       });
 
