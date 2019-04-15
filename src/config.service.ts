@@ -13,7 +13,7 @@ export class ConfigService {
     this.envConfig = this.validateInput(config);
   }
 
-  get port(): number {
+  get getPort(): number {
     return Number(process.env.PORT);
   }
 

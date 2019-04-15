@@ -27,7 +27,7 @@ async function bootstrap() {
     }),
   );
 
-  await app.listen(configService.port);
+  await app.listen(configService.getPort);
   Logger.log('\n\n', 'Separator');
 }
 bootstrap();

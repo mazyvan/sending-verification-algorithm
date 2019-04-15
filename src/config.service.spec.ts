@@ -38,7 +38,7 @@ describe('ConfigService', () => {
     it('should have all the methods required', async () => {
       expect(service.getEnv).toBeDefined();
       expect(service.isApiAuthEnabled).toBeDefined();
-      expect(service.port).toBeDefined();
+      expect(service.getPort).toBeDefined();
       expect(service.verificationMessage).toBeDefined();
       expect(service.successfulVerificationMessage).toBeDefined();
       expect(service.errorVerificationMessage).toBeDefined();
