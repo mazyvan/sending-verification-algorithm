@@ -4,8 +4,7 @@ import { serializePhoneNumber } from '../../lib/scripts/phone-number-manipulatio
 import { generateA4DigitRandomVerificationCode } from '../../lib/scripts/random-verification-code';
 import { SMSService } from '../../lib/services/sms.service';
 import { ConfigService } from '../../config.service';
-
-const PhoneNumbersAndVerificationCodesDataStorage: { [key: string]: number } = {};
+import { DataStorage } from '../../data.storage';
 
 @Injectable()
 export class AuthService {
@@ -14,13 +13,13 @@ export class AuthService {
   async sendingVerificationAlgorithm(to: string): Promise<MessageInstance> {
     const toSerialized = serializePhoneNumber(to);
 
-    const code = !this.getVerificationCodeByPhoneNumber(toSerialized)
+    const code = !DataStorage.getVerificationCodeByPhoneNumber(toSerialized)
       ? generateA4DigitRandomVerificationCode()
-      : this.getVerificationCodeByPhoneNumber(toSerialized);
+      : DataStorage.getVerificationCodeByPhoneNumber(toSerialized);
 
     const message = `${this.configService.verificationMessage} ${code}`;
 
-    this.setVerificationCodeToPhoneNumber(toSerialized, code);
+    DataStorage.setVerificationCodeToPhoneNumber(toSerialized, code);
 
     return await this.SMSServiceInstance.sendMessageWithErrorHandling(toSerialized, message);
   }
@@ -32,7 +31,7 @@ export class AuthService {
     const successfulMessage = this.configService.successfulVerificationMessage;
     const errorMessage = this.configService.errorVerificationMessage;
 
-    const codeSentToThatPhoneNumber = this.getVerificationCodeByPhoneNumber(phoneNumberSerialized);
+    const codeSentToThatPhoneNumber = DataStorage.getVerificationCodeByPhoneNumber(phoneNumberSerialized);
 
     if (!codeSentToThatPhoneNumber || codeSentToThatPhoneNumber !== codeParsed) {
       await this.SMSServiceInstance.sendMessageWithErrorHandling(phoneNumberSerialized, errorMessage);
@@ -42,20 +41,8 @@ export class AuthService {
     const result = await this.SMSServiceInstance.sendMessageWithErrorHandling(phoneNumberSerialized, successfulMessage);
 
     // Only delete the phone number and code if we reach the user
-    this.deleteVerificationCodeByPhoneNumber(phoneNumberSerialized);
+    DataStorage.deleteVerificationCodeByPhoneNumber(phoneNumberSerialized);
 
     return result;
-  }
-
-  private setVerificationCodeToPhoneNumber(toSerialized: string, code: number) {
-    PhoneNumbersAndVerificationCodesDataStorage[toSerialized] = code;
-  }
-
-  private getVerificationCodeByPhoneNumber(phoneNumberSerialized: string) {
-    return PhoneNumbersAndVerificationCodesDataStorage[phoneNumberSerialized];
-  }
-
-  private deleteVerificationCodeByPhoneNumber(phoneNumberSerialized: string) {
-    delete PhoneNumbersAndVerificationCodesDataStorage[phoneNumberSerialized];
   }
 }
