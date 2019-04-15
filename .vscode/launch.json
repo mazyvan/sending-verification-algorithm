@@ -1,0 +1,29 @@
+{
+  // Use IntelliSense para saber los atributos posibles.
+  // Mantenga el puntero para ver las descripciones de los existentes atributos
+  // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Sending Verification Algorithm API In Debug Mode",
+      "type": "node",
+      "request": "attach",
+      "restart": true,
+      "port": 5858,
+      "sourceMaps": true,
+      "smartStep": true,
+      "outFiles": [],
+      "localRoot": null,
+      "remoteRoot": "${command:extension.vscode-wsl-workspaceFolder}",
+      "windows": {
+        "useWSL": true
+      },
+      "skipFiles": [
+        "<node_internals>/**/*.js",
+        "${command:extension.vscode-wsl-workspaceFolder}/node_modules/**/*.js",
+        "/node_modules/**/*.js",
+        "/lib/**/*.js"
+      ]
+    }
+  ]
+}
