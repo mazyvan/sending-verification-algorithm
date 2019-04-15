@@ -33,9 +33,14 @@ $ npm run test
 $ npm run test:cov
 ```
 
+## Documentation
+
+This project automatically generates a OpenAPI(Swagger) specification based document that is exposed using Swagger UI 📑  
+After running the project you can go to: [http://localhost:3000/developers](http://localhost:3000/developers)
+
 ## Architecture
 
-### Class Diagram
+### Class Diagrams
 
 <img src="./diagrams/classes-diagram.png" width="880" alt="Get verification code process diagram" />
 
