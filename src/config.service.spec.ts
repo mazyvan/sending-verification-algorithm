@@ -17,9 +17,21 @@ describe('ConfigService', () => {
     expect(service).toBeDefined();
   });
 
-  it('should throw an exception if the env variables doesn\'t match the validation', () => {
+  // tslint:disable-next-line:quotemark
+  it("should throw an exception if the env variables doesn't match the validation", () => {
     // tslint:disable-next-line:no-string-literal
     expect(() => service['validateInput']({ wrongValue: 'true' })).toThrow();
+  });
+
+  // tslint:disable-next-line:quotemark
+  it("should throw an exception if the env variables doesn't match the validation and there is no PORT", () => {
+    const savedPORT = process.env.PORT;
+    process.env.PORT = '';
+
+    // tslint:disable-next-line:no-string-literal
+    expect(() => service['validateInput']({ wrongValue: 'true' })).toThrow();
+
+    process.env.PORT = savedPORT;
   });
 
   describe('get methods', () => {
