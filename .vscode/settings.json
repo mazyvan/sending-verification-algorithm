@@ -4,4 +4,16 @@
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "cSpell.language": "en,en-US,es,es-MX",
+  "cSpell.words": [
+    "be",
+    "forbid",
+    "interactor",
+    "non",
+    "resending",
+    "to",
+    "truthy",
+    "twilio",
+    "typeorm",
+    "whitelisted"
+  ]
 }
