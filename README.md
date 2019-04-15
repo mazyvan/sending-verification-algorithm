@@ -8,6 +8,7 @@ A simple API to verify users' phone number. Made with ❤ by Iván Sánchez
 
 ```bash
 $ npm install
+$ cp .env.example .env # and add your credentials following the example data
 ```
 
 ## Running the app
