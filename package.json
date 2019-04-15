@@ -1,7 +1,7 @@
 {
   "name": "sending-verification-algorithm",
   "version": "0.0.0",
-  "description": "A simple API to verificate users' phone number",
+  "description": "A simple API to verify users' phone number",
   "author": "Iván Sánchez <mazyvan@hotmail.com>",
   "license": "MIT",
   "scripts": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "@nestjs/common": "^5.4.0",
     "@nestjs/core": "^5.4.0",
+    "@nestjs/swagger": "^3.0.2",
     "class-transformer": "^0.2.0",
     "class-validator": "^0.9.1",
     "dotenv": "^7.0.0",
@@ -29,6 +30,7 @@
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.2.2",
+    "swagger-ui-express": "^4.0.2",
     "twilio": "^3.30.1",
     "typescript": "^3.0.1"
   },
