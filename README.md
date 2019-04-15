@@ -36,6 +36,7 @@ $ npm run test:cov
 ## Important notes
 
 - The user stories has one example of a valid phone format that this API is not fulfilling (+52-12-3456-7890) the API throws an exception with this number. That is because the phone number validation checks against more than just the simple format. It internally make use of the [google-libphonenumber](https://github.com/ruimarinho/google-libphonenumber/blob/1e46138878cff479aafe2ce62175c6c49cb58720/src/metadata.js#L33) library that check not only the country code, but also the region code. And after googling it seems like there are only tree 2 digit codes (55, 33 y 81) in Mexico. Non of them is "12".
+- With a free trial twilio account. Every message sent through this API is going to be preceded with: "Sent from your Twilio trial account"
 
 ## Documentation
 
