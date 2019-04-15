@@ -38,3 +38,5 @@ $ npm run test:cov
 ### Process Diagrams
 
 <img src="./diagrams/get-verification-code-process-diagram.png" width="840" alt="Get verification code process diagram" />
+
+<img src="./diagrams/verify-phone-number-with-code-process-diagram.png" width="840" alt="Get verification code process diagram" />
