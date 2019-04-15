@@ -35,8 +35,9 @@ $ npm run test:cov
 
 ## Documentation
 
-This project automatically generates a OpenAPI(Swagger) specification based document that is exposed using Swagger UI 📑  
-After running the project you can go to: [http://localhost:3000/developers](http://localhost:3000/developers)
+This project automatically generates a OpenAPI(Swagger) specification based document 📑 that is exposed using Swagger UI  
+After running the project just go to: [http://localhost:3000/developers](http://localhost:3000/developers)  
+This UI also serves as a rest client. So every requests to the API can be tested directly from your browser 👍
 
 ## Architecture
 
