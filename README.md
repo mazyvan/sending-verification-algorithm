@@ -35,6 +35,10 @@ $ npm run test:cov
 
 ## Architecture
 
+### Class Diagram
+
+<img src="./diagrams/classes-diagram.png" width="840" alt="Get verification code process diagram" />
+
 ### Process Diagrams
 
 <img src="./diagrams/get-verification-code-process-diagram.png" width="840" alt="Get verification code process diagram" />
