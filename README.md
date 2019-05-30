@@ -62,3 +62,7 @@ This UI also serves as a REST client. So every requests to the API can be tested
 <img src="./diagrams/get-verification-code-process-diagram.png" width="880" alt="Get verification code process diagram" />
 
 <img src="./diagrams/verify-phone-number-with-code-process-diagram.png" width="880" alt="Get verification code process diagram" />
+
+### Behavioral Code Analysis
+
+[![](https://codescene.io/projects/4967/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/4967/jobs/latest-successful/results)
