@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^5.4.0",
-    "@nestjs/core": "^5.4.0",
+    "@nestjs/core": "^9.2.1",
     "@nestjs/swagger": "^3.0.2",
     "class-transformer": "^0.2.0",
     "class-validator": "^0.9.1",
